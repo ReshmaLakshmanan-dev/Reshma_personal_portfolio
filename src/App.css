@@ -1,0 +1,156 @@
+     @tailwind base;
+     @tailwind components;
+     @tailwind utilities;
+
+     p {
+         color: azure;
+     }
+
+     .dev {
+         display: flex;
+         flex-direction: column;
+         row-gap: 20px;
+     }
+
+     .role {
+         list-style: none;
+         padding: 8px;
+         color: azure;
+         border-radius: 10px;
+         animation: move 5s infinite ease-in-out;
+     }
+
+     .container {
+         display: flex;
+         justify-content: center;
+         gap: 20px;
+         align-items: center;
+         padding-top: 60px;
+     }
+
+     #web {
+         background-color: blue;
+     }
+
+     #cw {
+         background-color: red;
+     }
+
+     #des {
+         background-color: orange;
+     }
+
+     #tut {
+         background-color: blueviolet;
+     }
+
+     .contain {
+         height: 45px;
+         width: 200px;
+         overflow: hidden;
+     }
+
+     #para {
+         opacity: 0.2;
+         transform: translateX(-250px);
+         animation: fade 2s ease-in-out forwards ;
+     }
+
+     #image {
+         opacity: 0.2;
+         transform: translateY(2 00px);
+         animation: img 2s ease-in-out forwards;
+     }
+
+     #btn {
+         transform: translateX(700px);
+         animation: button 2s ease-in-out forwards;
+     }
+
+     #para::before {
+         content: "";
+         position: absolute;
+         inset: 0;
+         border-radius: 12px;
+         box-sizing: border-box;
+         animation:  circle 3s linear infinite ;
+     }
+
+
+     @keyframes borderGlow {
+         0% {
+             border-color: #e83ba3;
+         }
+
+         /* pink-500 */
+         50% {
+             border-color: #3b82f6;
+         }
+
+         /* blue-500 */
+         100% {
+             border-color: greenyellow;
+         }
+
+         /* pink-500 */
+     }
+
+     @keyframes move {
+         100% {
+             transform: translateY(-175px);
+         }
+     }
+
+     @keyframes fade {
+         100% {
+             opacity: 1;
+             transform: translateX(0);
+         }
+     }
+
+     @keyframes img {
+         0% {
+             opacity: 0;
+             transform: translateY(20px);
+         }
+
+         100% {
+             opacity: 1;
+             transform: translateY(0);
+         }
+     }
+
+     @keyframes button {
+         100% {
+             opacity: 1;
+             transform: translateX(0);
+         }
+     }
+
+     @keyframes circle {
+         0% {
+             clip-path: polygon(0 0, 0 100%, 100% 0, 100% 0);
+             border: 2px solid rgb(13, 135, 235);
+
+         }
+
+         25% {
+             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+             border: 2px solid rgb(133, 180, 24);
+         }
+
+         50% {
+             clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+             border: 2px solid rgb(227, 83, 83);
+         }
+
+         75% {
+             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+             border: 2px solid rgb(211, 15, 204);
+         }
+
+         100% {
+             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+             border: 2px solid rgb(20, 248, 3);
+         }
+     }
